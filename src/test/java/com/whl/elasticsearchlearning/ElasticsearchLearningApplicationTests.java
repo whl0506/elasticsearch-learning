@@ -89,7 +89,7 @@ class ElasticsearchLearningApplicationTests {
      * 查询bank索引中state="AK"的文档
      */
     @Test
-    public void searchDataOfAK() throws IOException {
+    public void searchNormalData() throws IOException {
         SearchRequest searchRequest = new SearchRequest("bank");
         SearchSourceBuilder sourceBuilder = new SearchSourceBuilder();
         sourceBuilder.query(QueryBuilders.matchQuery("state","AK"));
